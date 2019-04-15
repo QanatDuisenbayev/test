@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7</title>
+</head>
+<body>
+<h1>На странице имеется форма с кнопками и полями ввода, поставьте и отображайте таймер(10с) по окончанию которого форма станет недоступной</h1>
+
+<form method="POST" id="id">
+	<div>Форма закроется через <span id="time">10</span> секунд</div>
+	<input type="input" value="для ввода" name="">
+	<input type="input" value="для ввода" name="">
+	<button>кнопка</button>
+
+</form>
+
+
+<script type="text/javascript">
+function exit() {
+	document.getElementById('id').innerHTML = "ВСЕ!";
+}
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var x = 10,
+        display = document.querySelector('#time');
+    	startTimer(x, display);
+};
+setTimeout(exit, 10000);
+</script>
+</body>
+</html>

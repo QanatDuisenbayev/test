@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>6</title>
+		<style type="text/css">
+		.general{
+		height: 300px;
+ 	 	width: 	300px;
+  		border: 1px solid black;
+  		display: inline-block;
+  		position:relative;
+  		}
+	</style>
+</head>
+<body>
+<h1>По клику кнопки поменяйте содержимое div блоков местами</h1>
+
+
+<div class="general" id="id">
+	Содержимое первого блока
+</div>
+
+
+<div class="general" id="id2">
+	Содержимое второго блока
+</div>	
+<br>
+
+
+
+<input style="font-size:25px; margin-left: 13%;margin-top: 10px" onclick="start()" type="submit" value="поменять">
+
+<script>
+	function start(){
+
+		var x = document.getElementById('id').innerHTML;
+		document.getElementById('id').innerHTML = document.getElementById('id2').innerHTML;
+		document.getElementById('id2').innerHTML = x;
+
+	}
+</script>
+
+
+</body>
+</html>

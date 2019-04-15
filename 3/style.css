@@ -1,0 +1,14 @@
+ 
+.general {
+  width: 600px;
+  border: 1px solid black;
+}
+
+.general2 {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: -3px;
+}
+ 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>4</title>
+	<style type="text/css">
+		.general{
+		height: 300px;
+ 	 	width: 	300px;
+  		border: 1px solid black;
+  		background-color: white;
+  		position:absolute;
+  		}
+	</style>
+</head>
+<body>
+<div id="general" class="general"></div>
+<br>
+
+
+<script>
+	var elem = document.querySelector('#general');
+	window.addEventListener('click',function(event){
+		elem.style.left = event.clientX+'px';
+		elem.style.top = event.clientY + 'px';
+	})
+</script>
+</body>
+</html>
